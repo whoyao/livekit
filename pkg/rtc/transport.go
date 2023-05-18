@@ -152,6 +152,8 @@ type PCTransport struct {
 	pc     *webrtc.PeerConnection
 	me     *webrtc.MediaEngine
 
+	interceptorFs []interceptor.Factory
+
 	lock sync.RWMutex
 
 	reliableDC       *webrtc.DataChannel
@@ -231,7 +233,7 @@ type TransportParams struct {
 	IsSendSide              bool
 }
 
-func newPeerConnection(params TransportParams, onBandwidthEstimator func(estimator cc.BandwidthEstimator)) (*webrtc.PeerConnection, *webrtc.MediaEngine, error) {
+func newPeerConnection(params TransportParams, fs []interceptor.Factory, onBandwidthEstimator func(estimator cc.BandwidthEstimator)) (*webrtc.PeerConnection, *webrtc.MediaEngine, error) {
 	directionConfig := params.DirectionConfig
 
 	me, err := createMediaEngine(params.EnabledCodecs, directionConfig)
@@ -349,6 +351,11 @@ func newPeerConnection(params TransportParams, onBandwidthEstimator func(estimat
 			ir.Add(f)
 		}
 	}
+	for _, f := range fs {
+		ir.Add(f)
+	}
+	webrtc.ConfigureNack(me, ir)
+	webrtc.ConfigureTWCCSender(me, ir)
 	api := webrtc.NewAPI(
 		webrtc.WithMediaEngine(me),
 		webrtc.WithSettingEngine(se),
@@ -358,12 +365,13 @@ func newPeerConnection(params TransportParams, onBandwidthEstimator func(estimat
 	return pc, me, err
 }
 
-func NewPCTransport(params TransportParams) (*PCTransport, error) {
+func NewPCTransport(params TransportParams, fs []interceptor.Factory) (*PCTransport, error) {
 	if params.Logger == nil {
 		params.Logger = logger.GetLogger()
 	}
 	t := &PCTransport{
 		params:                   params,
+		interceptorFs:            fs,
 		debouncedNegotiate:       debounce.New(negotiationFrequency),
 		negotiationState:         NegotiationStateNone,
 		eventCh:                  make(chan event, 50),
@@ -389,7 +397,7 @@ func NewPCTransport(params TransportParams) (*PCTransport, error) {
 
 func (t *PCTransport) createPeerConnection() error {
 	var bwe cc.BandwidthEstimator
-	pc, me, err := newPeerConnection(t.params, func(estimator cc.BandwidthEstimator) {
+	pc, me, err := newPeerConnection(t.params, t.interceptorFs, func(estimator cc.BandwidthEstimator) {
 		bwe = estimator
 	})
 	if err != nil {

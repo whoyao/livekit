@@ -1,4 +1,4 @@
-module github.com/livekit/livekit-server
+module github.com/whoyao/livekit
 
 go 1.18
 

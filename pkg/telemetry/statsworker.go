@@ -8,8 +8,8 @@ import (
 	"google.golang.org/protobuf/proto"
 	"google.golang.org/protobuf/types/known/timestamppb"
 
+	"github.com/whoyao/livekit/pkg/utils"
 	"github.com/whoyao/protocol/livekit"
-	"github.com/whoyao/protocol/livekit/pkg/utils"
 	"github.com/whoyao/protocol/logger"
 )
 

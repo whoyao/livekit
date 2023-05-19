@@ -3,9 +3,9 @@ package sfu
 import (
 	"sync"
 
-	"github.com/livekit/protocol/livekit"
-	"github.com/livekit/protocol/logger"
-	"github.com/livekit/protocol/utils"
+	"github.com/whoyao/protocol/livekit"
+	"github.com/whoyao/protocol/logger"
+	"github.com/whoyao/protocol/utils"
 )
 
 type DownTrackSpreaderParams struct {

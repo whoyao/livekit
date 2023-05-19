@@ -12,11 +12,11 @@ import (
 	"github.com/redis/go-redis/v9"
 	"google.golang.org/protobuf/proto"
 
-	"github.com/livekit/livekit-server/version"
-	"github.com/livekit/protocol/ingress"
-	"github.com/livekit/protocol/livekit"
-	"github.com/livekit/protocol/logger"
-	"github.com/livekit/protocol/utils"
+	"github.com/whoyao/livekit/version"
+	"github.com/whoyao/protocol/ingress"
+	"github.com/whoyao/protocol/livekit"
+	"github.com/whoyao/protocol/logger"
+	"github.com/whoyao/protocol/utils"
 )
 
 const (

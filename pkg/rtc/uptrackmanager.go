@@ -4,11 +4,11 @@ import (
 	"errors"
 	"sync"
 
-	"github.com/livekit/protocol/livekit"
-	"github.com/livekit/protocol/logger"
+	"github.com/whoyao/protocol/livekit"
+	"github.com/whoyao/protocol/logger"
 
-	"github.com/livekit/livekit-server/pkg/rtc/types"
-	"github.com/livekit/protocol/utils"
+	"github.com/whoyao/livekit/pkg/rtc/types"
+	"github.com/whoyao/protocol/utils"
 )
 
 var (

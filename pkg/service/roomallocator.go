@@ -4,13 +4,13 @@ import (
 	"context"
 	"time"
 
-	"github.com/livekit/protocol/livekit"
-	"github.com/livekit/protocol/logger"
-	"github.com/livekit/protocol/utils"
+	"github.com/whoyao/protocol/livekit"
+	"github.com/whoyao/protocol/logger"
+	"github.com/whoyao/protocol/utils"
 
-	"github.com/livekit/livekit-server/pkg/config"
-	"github.com/livekit/livekit-server/pkg/routing"
-	"github.com/livekit/livekit-server/pkg/routing/selector"
+	"github.com/whoyao/livekit/pkg/config"
+	"github.com/whoyao/livekit/pkg/routing"
+	"github.com/whoyao/livekit/pkg/routing/selector"
 )
 
 type StandardRoomAllocator struct {

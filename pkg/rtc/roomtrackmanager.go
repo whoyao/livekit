@@ -19,9 +19,9 @@ package rtc
 import (
 	"sync"
 
-	"github.com/livekit/livekit-server/pkg/rtc/types"
-	"github.com/livekit/livekit-server/pkg/utils"
-	"github.com/livekit/protocol/livekit"
+	"github.com/whoyao/livekit/pkg/rtc/types"
+	"github.com/whoyao/livekit/pkg/utils"
+	"github.com/whoyao/protocol/livekit"
 )
 
 // RoomTrackManager holds tracks that are published to the room

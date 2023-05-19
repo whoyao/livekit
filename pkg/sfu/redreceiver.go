@@ -8,10 +8,10 @@ import (
 
 	"github.com/pion/rtp"
 
-	"github.com/livekit/livekit-server/pkg/sfu/buffer"
-	"github.com/livekit/mediatransportutil/pkg/bucket"
-	"github.com/livekit/protocol/livekit"
-	"github.com/livekit/protocol/logger"
+	"github.com/whoyao/livekit/pkg/sfu/buffer"
+	"github.com/whoyao/mediatransportutil/pkg/bucket"
+	"github.com/whoyao/protocol/livekit"
+	"github.com/whoyao/protocol/logger"
 )
 
 const (

@@ -11,16 +11,16 @@ import (
 	"github.com/redis/go-redis/v9"
 	"github.com/twitchtv/twirp"
 
-	"github.com/livekit/livekit-server/pkg/config"
-	"github.com/livekit/livekit-server/pkg/routing"
-	"github.com/livekit/livekit-server/pkg/service"
-	"github.com/livekit/livekit-server/pkg/telemetry/prometheus"
-	"github.com/livekit/livekit-server/pkg/testutils"
-	testclient "github.com/livekit/livekit-server/test/client"
-	"github.com/livekit/protocol/auth"
-	"github.com/livekit/protocol/livekit"
-	"github.com/livekit/protocol/logger"
-	"github.com/livekit/protocol/utils"
+	"github.com/whoyao/livekit/pkg/config"
+	"github.com/whoyao/livekit/pkg/routing"
+	"github.com/whoyao/livekit/pkg/service"
+	"github.com/whoyao/livekit/pkg/telemetry/prometheus"
+	"github.com/whoyao/livekit/pkg/testutils"
+	testclient "github.com/whoyao/livekit/test/client"
+	"github.com/whoyao/protocol/auth"
+	"github.com/whoyao/protocol/livekit"
+	"github.com/whoyao/protocol/logger"
+	"github.com/whoyao/protocol/utils"
 )
 
 const (

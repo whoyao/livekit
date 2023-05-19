@@ -6,9 +6,9 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/livekit/protocol/livekit"
+	"github.com/whoyao/protocol/livekit"
 
-	"github.com/livekit/livekit-server/pkg/routing/selector"
+	"github.com/whoyao/livekit/pkg/routing/selector"
 )
 
 func TestIsAvailable(t *testing.T) {

@@ -5,8 +5,8 @@ import (
 	"context"
 	"sync"
 
-	"github.com/livekit/livekit-server/pkg/telemetry"
-	"github.com/livekit/protocol/livekit"
+	"github.com/whoyao/livekit/pkg/telemetry"
+	"github.com/whoyao/protocol/livekit"
 )
 
 type FakeAnalyticsService struct {

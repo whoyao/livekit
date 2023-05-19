@@ -6,11 +6,11 @@ import (
 
 	"github.com/bep/debounce"
 
-	"github.com/livekit/protocol/livekit"
-	"github.com/livekit/protocol/logger"
+	"github.com/whoyao/protocol/livekit"
+	"github.com/whoyao/protocol/logger"
 
-	"github.com/livekit/livekit-server/pkg/rtc/types"
-	"github.com/livekit/livekit-server/pkg/utils"
+	"github.com/whoyao/livekit/pkg/rtc/types"
+	"github.com/whoyao/livekit/pkg/utils"
 )
 
 type DynacastManagerParams struct {

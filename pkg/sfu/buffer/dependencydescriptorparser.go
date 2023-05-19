@@ -6,9 +6,9 @@ import (
 
 	"github.com/pion/rtp"
 
-	dd "github.com/livekit/livekit-server/pkg/sfu/dependencydescriptor"
+	dd "github.com/whoyao/livekit/pkg/sfu/dependencydescriptor"
 
-	"github.com/livekit/protocol/logger"
+	"github.com/whoyao/protocol/logger"
 )
 
 type DependencyDescriptorParser struct {

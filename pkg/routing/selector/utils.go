@@ -6,9 +6,9 @@ import (
 
 	"github.com/thoas/go-funk"
 
-	"github.com/livekit/protocol/livekit"
+	"github.com/whoyao/protocol/livekit"
 
-	"github.com/livekit/livekit-server/pkg/config"
+	"github.com/whoyao/livekit/pkg/config"
 )
 
 const AvailableSeconds = 5

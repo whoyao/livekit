@@ -13,15 +13,15 @@ import (
 	"github.com/pion/rtp"
 	"github.com/pion/sdp/v3"
 	"github.com/pion/transport/v2/packetio"
-	"github.com/pion/webrtc/v3"
+	"github.com/whoyao/webrtc/v3"
 	"go.uber.org/atomic"
 
-	"github.com/livekit/protocol/livekit"
-	"github.com/livekit/protocol/logger"
+	"github.com/whoyao/protocol/livekit"
+	"github.com/whoyao/protocol/logger"
 
-	"github.com/livekit/livekit-server/pkg/sfu/buffer"
-	"github.com/livekit/livekit-server/pkg/sfu/connectionquality"
-	dd "github.com/livekit/livekit-server/pkg/sfu/dependencydescriptor"
+	"github.com/whoyao/livekit/pkg/sfu/buffer"
+	"github.com/whoyao/livekit/pkg/sfu/connectionquality"
+	dd "github.com/whoyao/livekit/pkg/sfu/dependencydescriptor"
 )
 
 // TrackSender defines an interface send media to remote peer

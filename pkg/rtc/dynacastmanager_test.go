@@ -1,16 +1,15 @@
 package rtc
 
 import (
+	"github.com/pion/webrtc/v3"
 	"sort"
 	"sync"
 	"testing"
 	"time"
 
-	"github.com/pion/webrtc/v3"
 	"github.com/stretchr/testify/require"
-
-	"github.com/livekit/livekit-server/pkg/rtc/types"
-	"github.com/livekit/protocol/livekit"
+	"github.com/whoyao/livekit/pkg/rtc/types"
+	"github.com/whoyao/protocol/livekit"
 )
 
 func TestSubscribedMaxQuality(t *testing.T) {

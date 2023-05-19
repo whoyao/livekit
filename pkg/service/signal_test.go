@@ -9,11 +9,11 @@ import (
 	"google.golang.org/protobuf/encoding/protojson"
 	"google.golang.org/protobuf/proto"
 
-	"github.com/livekit/livekit-server/pkg/config"
-	"github.com/livekit/livekit-server/pkg/routing"
-	"github.com/livekit/livekit-server/pkg/telemetry/prometheus"
-	"github.com/livekit/protocol/livekit"
 	"github.com/livekit/psrpc"
+	"github.com/whoyao/livekit/pkg/config"
+	"github.com/whoyao/livekit/pkg/routing"
+	"github.com/whoyao/livekit/pkg/telemetry/prometheus"
+	"github.com/whoyao/protocol/livekit"
 )
 
 func init() {

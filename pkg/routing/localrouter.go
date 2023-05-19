@@ -8,8 +8,8 @@ import (
 	"go.uber.org/atomic"
 	"google.golang.org/protobuf/proto"
 
-	"github.com/livekit/protocol/livekit"
-	"github.com/livekit/protocol/logger"
+	"github.com/whoyao/protocol/livekit"
+	"github.com/whoyao/protocol/logger"
 )
 
 // aggregated channel for all participants

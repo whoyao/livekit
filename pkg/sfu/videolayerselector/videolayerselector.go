@@ -1,8 +1,8 @@
 package videolayerselector
 
 import (
-	"github.com/livekit/livekit-server/pkg/sfu/buffer"
-	"github.com/livekit/livekit-server/pkg/sfu/videolayerselector/temporallayerselector"
+	"github.com/whoyao/livekit/pkg/sfu/buffer"
+	"github.com/whoyao/livekit/pkg/sfu/videolayerselector/temporallayerselector"
 )
 
 type VideoLayerSelectorResult struct {

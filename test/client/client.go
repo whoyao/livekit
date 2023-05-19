@@ -14,17 +14,16 @@ import (
 	"github.com/gorilla/websocket"
 	"github.com/pion/rtcp"
 	"github.com/pion/rtp"
-	"github.com/pion/webrtc/v3"
 	"github.com/thoas/go-funk"
 	"go.uber.org/atomic"
 	"google.golang.org/protobuf/proto"
 
-	"github.com/livekit/mediatransportutil/pkg/rtcconfig"
-	"github.com/livekit/protocol/livekit"
-	"github.com/livekit/protocol/logger"
+	"github.com/whoyao/mediatransportutil/pkg/rtcconfig"
+	"github.com/whoyao/protocol/livekit"
+	"github.com/whoyao/protocol/logger"
 
-	"github.com/livekit/livekit-server/pkg/rtc"
-	"github.com/livekit/livekit-server/pkg/rtc/types"
+	"github.com/whoyao/livekit/pkg/rtc"
+	"github.com/whoyao/livekit/pkg/rtc/types"
 )
 
 type RTCClient struct {

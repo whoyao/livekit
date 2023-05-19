@@ -7,9 +7,9 @@ import (
 
 	"github.com/gammazero/deque"
 
-	"github.com/livekit/livekit-server/pkg/rtc/types"
-	"github.com/livekit/protocol/livekit"
-	"github.com/livekit/protocol/logger"
+	"github.com/whoyao/livekit/pkg/rtc/types"
+	"github.com/whoyao/protocol/livekit"
+	"github.com/whoyao/protocol/logger"
 )
 
 const (

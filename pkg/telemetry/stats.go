@@ -1,8 +1,8 @@
 package telemetry
 
 import (
-	"github.com/livekit/livekit-server/pkg/telemetry/prometheus"
-	"github.com/livekit/protocol/livekit"
+	"github.com/whoyao/livekit/pkg/telemetry/prometheus"
+	"github.com/whoyao/protocol/livekit"
 )
 
 type StatsKey struct {

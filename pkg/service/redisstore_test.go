@@ -9,11 +9,11 @@ import (
 	"github.com/stretchr/testify/require"
 	"go.uber.org/atomic"
 
-	"github.com/livekit/protocol/ingress"
-	"github.com/livekit/protocol/livekit"
-	"github.com/livekit/protocol/utils"
+	"github.com/whoyao/protocol/ingress"
+	"github.com/whoyao/protocol/livekit"
+	"github.com/whoyao/protocol/utils"
 
-	"github.com/livekit/livekit-server/pkg/service"
+	"github.com/whoyao/livekit/pkg/service"
 )
 
 func TestRoomInternal(t *testing.T) {

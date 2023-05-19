@@ -3,13 +3,11 @@ package sfu
 import (
 	"testing"
 
-	"github.com/pion/webrtc/v3"
 	"github.com/stretchr/testify/require"
+	"github.com/whoyao/protocol/logger"
 
-	"github.com/livekit/protocol/logger"
-
-	"github.com/livekit/livekit-server/pkg/sfu/buffer"
-	"github.com/livekit/livekit-server/pkg/sfu/testutils"
+	"github.com/whoyao/livekit/pkg/sfu/buffer"
+	"github.com/whoyao/livekit/pkg/sfu/testutils"
 )
 
 func disable(f *Forwarder) {

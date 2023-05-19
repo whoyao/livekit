@@ -6,10 +6,10 @@ import (
 
 	"github.com/pion/rtcp"
 
-	"github.com/livekit/protocol/livekit"
-	"github.com/livekit/protocol/logger"
+	"github.com/whoyao/protocol/livekit"
+	"github.com/whoyao/protocol/logger"
 
-	"github.com/livekit/livekit-server/pkg/sfu"
+	"github.com/whoyao/livekit/pkg/sfu"
 )
 
 const (

@@ -3,8 +3,8 @@ package buffer
 import (
 	"container/list"
 
-	"github.com/livekit/protocol/logger"
 	"github.com/pion/rtp/codecs"
+	"github.com/whoyao/protocol/logger"
 )
 
 var minFramesForCalculation = [...]int{8, 15, 40}

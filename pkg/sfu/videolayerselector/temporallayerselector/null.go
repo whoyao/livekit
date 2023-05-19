@@ -1,7 +1,7 @@
 package temporallayerselector
 
 import (
-	"github.com/livekit/livekit-server/pkg/sfu/buffer"
+	"github.com/whoyao/livekit/pkg/sfu/buffer"
 )
 
 type Null struct{}

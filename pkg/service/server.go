@@ -19,12 +19,12 @@ import (
 	"go.uber.org/atomic"
 	"golang.org/x/sync/errgroup"
 
-	"github.com/livekit/livekit-server/pkg/config"
-	"github.com/livekit/livekit-server/pkg/routing"
-	"github.com/livekit/livekit-server/version"
-	"github.com/livekit/protocol/auth"
-	"github.com/livekit/protocol/livekit"
-	"github.com/livekit/protocol/logger"
+	"github.com/whoyao/livekit/pkg/config"
+	"github.com/whoyao/livekit/pkg/routing"
+	"github.com/whoyao/livekit/version"
+	"github.com/whoyao/protocol/auth"
+	"github.com/whoyao/protocol/livekit"
+	"github.com/whoyao/protocol/logger"
 )
 
 type LivekitServer struct {

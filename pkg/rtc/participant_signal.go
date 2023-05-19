@@ -5,12 +5,10 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/pion/webrtc/v3"
-
-	"github.com/livekit/protocol/livekit"
 	"github.com/livekit/psrpc"
+	"github.com/whoyao/protocol/livekit"
 
-	"github.com/livekit/livekit-server/pkg/routing"
+	"github.com/whoyao/livekit/pkg/routing"
 )
 
 func (p *ParticipantImpl) getResponseSink() routing.MessageSink {

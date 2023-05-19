@@ -3,10 +3,10 @@ package videolayerselector
 import (
 	"fmt"
 
-	"github.com/livekit/livekit-server/pkg/sfu/buffer"
-	dede "github.com/livekit/livekit-server/pkg/sfu/dependencydescriptor"
-	"github.com/livekit/livekit-server/pkg/sfu/utils"
-	"github.com/livekit/protocol/logger"
+	"github.com/whoyao/livekit/pkg/sfu/buffer"
+	dede "github.com/whoyao/livekit/pkg/sfu/dependencydescriptor"
+	"github.com/whoyao/livekit/pkg/sfu/utils"
+	"github.com/whoyao/protocol/logger"
 )
 
 type DependencyDescriptor struct {

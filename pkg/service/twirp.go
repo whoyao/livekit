@@ -24,8 +24,8 @@ import (
 
 	"github.com/twitchtv/twirp"
 
-	"github.com/livekit/livekit-server/pkg/telemetry/prometheus"
-	"github.com/livekit/protocol/logger"
+	"github.com/whoyao/livekit/pkg/telemetry/prometheus"
+	"github.com/whoyao/protocol/logger"
 )
 
 var (

@@ -1,7 +1,7 @@
 package streamallocator
 
 import (
-	"github.com/livekit/protocol/livekit"
+	"github.com/whoyao/protocol/livekit"
 )
 
 // ------------------------------------------------

@@ -17,8 +17,6 @@ require (
 	github.com/hashicorp/golang-lru/v2 v2.0.2
 	github.com/jxskiss/base62 v1.1.0
 	github.com/livekit/mageutil v0.0.0-20230125210925-54e8a70427c1
-	github.com/livekit/mediatransportutil v0.0.0-20230511025422-058ebf6b48c9
-	github.com/livekit/protocol v1.5.7-0.20230513090813-c5dc103838fd
 	github.com/livekit/psrpc v0.3.1-0.20230502152150-df9dd21fba11
 	github.com/mackerelio/go-osstat v0.2.4
 	github.com/magefile/mage v1.14.0
@@ -26,14 +24,14 @@ require (
 	github.com/mitchellh/go-homedir v1.1.0
 	github.com/olekukonko/tablewriter v0.0.5
 	github.com/pion/dtls/v2 v2.2.6
-	github.com/pion/ice/v2 v2.3.2
+	github.com/pion/ice/v2 v2.3.4
 	github.com/pion/interceptor v0.1.16
 	github.com/pion/rtcp v1.2.10
 	github.com/pion/rtp v1.7.13
 	github.com/pion/sdp/v3 v3.0.6
 	github.com/pion/transport/v2 v2.2.0
 	github.com/pion/turn/v2 v2.1.0
-	github.com/pion/webrtc/v3 v3.2.1
+	github.com/pion/webrtc/v3 v3.2.3
 	github.com/pkg/errors v0.9.1
 	github.com/prometheus/client_golang v1.15.1
 	github.com/redis/go-redis/v9 v9.0.4
@@ -44,6 +42,9 @@ require (
 	github.com/ua-parser/uap-go v0.0.0-20211112212520-00c877edfe0f
 	github.com/urfave/cli/v2 v2.25.3
 	github.com/urfave/negroni/v3 v3.0.0
+	github.com/whoyao/mediatransportutil v0.0.0-20230519003149-f3db96acbc57
+	github.com/whoyao/protocol v0.0.0-20230519005841-61b251d8468f
+	github.com/whoyao/webrtc/v3 v3.2.1-dev2
 	go.uber.org/atomic v1.11.0
 	golang.org/x/sync v0.2.0
 	google.golang.org/protobuf v1.30.0
@@ -68,6 +69,7 @@ require (
 	github.com/hashicorp/go-retryablehttp v0.7.2 // indirect
 	github.com/josharian/native v1.1.0 // indirect
 	github.com/lithammer/shortuuid/v4 v4.0.0 // indirect
+	github.com/livekit/protocol v1.5.7-0.20230513090813-c5dc103838fd // indirect
 	github.com/mattn/go-runewidth v0.0.9 // indirect
 	github.com/matttproud/golang_protobuf_extensions v1.0.4 // indirect
 	github.com/mdlayher/netlink v1.7.1 // indirect
@@ -80,8 +82,8 @@ require (
 	github.com/pion/mdns v0.0.7 // indirect
 	github.com/pion/randutil v0.1.0 // indirect
 	github.com/pion/sctp v1.8.7 // indirect
-	github.com/pion/srtp/v2 v2.0.12 // indirect
-	github.com/pion/stun v0.4.0 // indirect
+	github.com/pion/srtp/v2 v2.0.14 // indirect
+	github.com/pion/stun v0.5.2 // indirect
 	github.com/pion/udp/v2 v2.0.1 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/prometheus/client_model v0.3.0 // indirect
@@ -91,11 +93,11 @@ require (
 	github.com/xrash/smetrics v0.0.0-20201216005158-039620a65673 // indirect
 	go.uber.org/multierr v1.6.0 // indirect
 	go.uber.org/zap v1.24.0 // indirect
-	golang.org/x/crypto v0.8.0 // indirect
-	golang.org/x/exp v0.0.0-20230425010034-47ecfdc1ba53 // indirect
+	golang.org/x/crypto v0.9.0 // indirect
+	golang.org/x/exp v0.0.0-20230515195305-f3d0a9c9a5cc // indirect
 	golang.org/x/mod v0.8.0 // indirect
-	golang.org/x/net v0.9.0 // indirect
-	golang.org/x/sys v0.7.0 // indirect
+	golang.org/x/net v0.10.0 // indirect
+	golang.org/x/sys v0.8.0 // indirect
 	golang.org/x/text v0.9.0 // indirect
 	golang.org/x/tools v0.6.0 // indirect
 	google.golang.org/genproto v0.0.0-20230410155749-daa745c078e1 // indirect

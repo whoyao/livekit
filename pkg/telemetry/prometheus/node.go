@@ -8,8 +8,8 @@ import (
 	"github.com/prometheus/client_golang/prometheus"
 	"go.uber.org/atomic"
 
-	"github.com/livekit/livekit-server/pkg/config"
-	"github.com/livekit/protocol/livekit"
+	"github.com/whoyao/livekit/pkg/config"
+	"github.com/whoyao/protocol/livekit"
 )
 
 const (

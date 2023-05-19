@@ -6,13 +6,13 @@ import (
 	"testing"
 	"time"
 
+	"github.com/pion/interceptor"
 	"github.com/pion/sdp/v3"
-	"github.com/pion/webrtc/v3"
 	"github.com/stretchr/testify/require"
+	"github.com/whoyao/livekit/pkg/testutils"
+	"github.com/whoyao/protocol/livekit"
+	"github.com/whoyao/webrtc/v3"
 	"go.uber.org/atomic"
-
-	"github.com/livekit/livekit-server/pkg/testutils"
-	"github.com/livekit/protocol/livekit"
 )
 
 func TestMissingAnswerDuringICERestart(t *testing.T) {
@@ -22,14 +22,14 @@ func TestMissingAnswerDuringICERestart(t *testing.T) {
 		Config:              &WebRTCConfig{},
 		IsOfferer:           true,
 	}
-	transportA, err := NewPCTransport(params)
+	transportA, err := NewPCTransport(params, []interceptor.Factory{})
 	require.NoError(t, err)
 	_, err = transportA.pc.CreateDataChannel("test", nil)
 	require.NoError(t, err)
 
 	paramsB := params
 	paramsB.IsOfferer = false
-	transportB, err := NewPCTransport(paramsB)
+	transportB, err := NewPCTransport(paramsB, []interceptor.Factory{})
 	require.NoError(t, err)
 
 	// exchange ICE
@@ -72,14 +72,14 @@ func TestNegotiationTiming(t *testing.T) {
 		Config:              &WebRTCConfig{},
 		IsOfferer:           true,
 	}
-	transportA, err := NewPCTransport(params)
+	transportA, err := NewPCTransport(params, []interceptor.Factory{})
 	require.NoError(t, err)
 	_, err = transportA.pc.CreateDataChannel("test", nil)
 	require.NoError(t, err)
 
 	paramsB := params
 	paramsB.IsOfferer = false
-	transportB, err := NewPCTransport(params)
+	transportB, err := NewPCTransport(params, []interceptor.Factory{})
 	require.NoError(t, err)
 
 	require.False(t, transportA.IsEstablished())
@@ -165,14 +165,14 @@ func TestFirstOfferMissedDuringICERestart(t *testing.T) {
 		Config:              &WebRTCConfig{},
 		IsOfferer:           true,
 	}
-	transportA, err := NewPCTransport(params)
+	transportA, err := NewPCTransport(params, []interceptor.Factory{})
 	require.NoError(t, err)
 	_, err = transportA.pc.CreateDataChannel("test", nil)
 	require.NoError(t, err)
 
 	paramsB := params
 	paramsB.IsOfferer = false
-	transportB, err := NewPCTransport(paramsB)
+	transportB, err := NewPCTransport(paramsB, []interceptor.Factory{})
 	require.NoError(t, err)
 
 	// exchange ICE
@@ -233,14 +233,14 @@ func TestFirstAnswerMissedDuringICERestart(t *testing.T) {
 		Config:              &WebRTCConfig{},
 		IsOfferer:           true,
 	}
-	transportA, err := NewPCTransport(params)
+	transportA, err := NewPCTransport(params, []interceptor.Factory{})
 	require.NoError(t, err)
 	_, err = transportA.pc.CreateDataChannel("test", nil)
 	require.NoError(t, err)
 
 	paramsB := params
 	paramsB.IsOfferer = false
-	transportB, err := NewPCTransport(paramsB)
+	transportB, err := NewPCTransport(paramsB, []interceptor.Factory{})
 	require.NoError(t, err)
 
 	// exchange ICE
@@ -306,7 +306,7 @@ func TestNegotiationFailed(t *testing.T) {
 		Config:              &WebRTCConfig{},
 		IsOfferer:           true,
 	}
-	transportA, err := NewPCTransport(params)
+	transportA, err := NewPCTransport(params, []interceptor.Factory{})
 	require.NoError(t, err)
 
 	transportA.OnICECandidate(func(candidate *webrtc.ICECandidate) error {
@@ -341,7 +341,7 @@ func TestFilteringCandidates(t *testing.T) {
 			{Mime: webrtc.MimeTypeH264},
 		},
 	}
-	transport, err := NewPCTransport(params)
+	transport, err := NewPCTransport(params, []interceptor.Factory{})
 	require.NoError(t, err)
 
 	_, err = transport.pc.CreateDataChannel("test", nil)

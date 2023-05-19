@@ -13,9 +13,9 @@ import (
 
 	"github.com/magefile/mage/mg"
 
-	"github.com/livekit/livekit-server/version"
 	"github.com/livekit/mageutil"
 	_ "github.com/livekit/psrpc"
+	"github.com/whoyao/livekit/version"
 )
 
 const (

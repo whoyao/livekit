@@ -6,8 +6,8 @@ import (
 	"github.com/pion/rtp"
 	"github.com/stretchr/testify/require"
 
-	"github.com/livekit/livekit-server/pkg/sfu/dependencydescriptor"
-	"github.com/livekit/protocol/logger"
+	"github.com/whoyao/livekit/pkg/sfu/dependencydescriptor"
+	"github.com/whoyao/protocol/logger"
 )
 
 type testFrameInfo struct {

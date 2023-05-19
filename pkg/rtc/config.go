@@ -2,12 +2,11 @@ package rtc
 
 import (
 	"github.com/pion/sdp/v3"
-	"github.com/pion/webrtc/v3"
-
-	"github.com/livekit/livekit-server/pkg/config"
-	"github.com/livekit/livekit-server/pkg/sfu/buffer"
-	dd "github.com/livekit/livekit-server/pkg/sfu/dependencydescriptor"
-	"github.com/livekit/mediatransportutil/pkg/rtcconfig"
+	"github.com/whoyao/livekit/pkg/config"
+	"github.com/whoyao/livekit/pkg/sfu/buffer"
+	dd "github.com/whoyao/livekit/pkg/sfu/dependencydescriptor"
+	"github.com/whoyao/mediatransportutil/pkg/rtcconfig"
+	"github.com/whoyao/webrtc/v3"
 )
 
 const (

@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/livekit/protocol/utils/timeseries"
+	"github.com/whoyao/protocol/utils/timeseries"
 )
 
 // ------------------------------------------------

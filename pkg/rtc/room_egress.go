@@ -6,11 +6,11 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/livekit/livekit-server/pkg/rtc/types"
-	"github.com/livekit/livekit-server/pkg/telemetry"
-	"github.com/livekit/protocol/livekit"
-	"github.com/livekit/protocol/rpc"
-	"github.com/livekit/protocol/webhook"
+	"github.com/whoyao/livekit/pkg/rtc/types"
+	"github.com/whoyao/livekit/pkg/telemetry"
+	"github.com/whoyao/protocol/livekit"
+	"github.com/whoyao/protocol/rpc"
+	"github.com/whoyao/protocol/webhook"
 )
 
 type EgressLauncher interface {

@@ -4,10 +4,10 @@ package typesfakes
 import (
 	"sync"
 
-	"github.com/livekit/livekit-server/pkg/rtc/types"
-	"github.com/livekit/livekit-server/pkg/sfu"
-	"github.com/livekit/protocol/livekit"
-	webrtc "github.com/pion/webrtc/v3"
+	"github.com/whoyao/livekit/pkg/rtc/types"
+	"github.com/whoyao/livekit/pkg/sfu"
+	"github.com/whoyao/protocol/livekit"
+	webrtc "github.com/whoyao/webrtc/v3"
 )
 
 type FakeSubscribedTrack struct {

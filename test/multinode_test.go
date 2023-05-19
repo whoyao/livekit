@@ -6,11 +6,11 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/livekit/protocol/auth"
-	"github.com/livekit/protocol/livekit"
+	"github.com/whoyao/protocol/auth"
+	"github.com/whoyao/protocol/livekit"
 
-	"github.com/livekit/livekit-server/pkg/rtc"
-	"github.com/livekit/livekit-server/pkg/testutils"
+	"github.com/whoyao/livekit/pkg/rtc"
+	"github.com/whoyao/livekit/pkg/testutils"
 )
 
 func TestMultiNodeRouting(t *testing.T) {

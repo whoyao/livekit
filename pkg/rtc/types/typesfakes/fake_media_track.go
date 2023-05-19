@@ -4,9 +4,9 @@ package typesfakes
 import (
 	"sync"
 
-	"github.com/livekit/livekit-server/pkg/rtc/types"
-	"github.com/livekit/livekit-server/pkg/sfu"
-	"github.com/livekit/protocol/livekit"
+	"github.com/whoyao/livekit/pkg/rtc/types"
+	"github.com/whoyao/livekit/pkg/sfu"
+	"github.com/whoyao/protocol/livekit"
 )
 
 type FakeMediaTrack struct {

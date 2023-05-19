@@ -3,8 +3,8 @@ package streamtracker
 import (
 	"time"
 
-	"github.com/livekit/livekit-server/pkg/config"
-	"github.com/livekit/protocol/logger"
+	"github.com/whoyao/livekit/pkg/config"
+	"github.com/whoyao/protocol/logger"
 )
 
 type StreamTrackerPacketParams struct {

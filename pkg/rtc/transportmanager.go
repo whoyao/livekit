@@ -1,6 +1,8 @@
 package rtc
 
 import (
+	"github.com/pion/interceptor"
+	"github.com/pion/webrtc/v3"
 	"math/bits"
 	"strings"
 	"sync"
@@ -9,18 +11,17 @@ import (
 	"github.com/pion/ice/v2"
 	"github.com/pion/rtcp"
 	"github.com/pion/sdp/v3"
-	"github.com/pion/webrtc/v3"
 	"github.com/pkg/errors"
 	"go.uber.org/atomic"
 	"google.golang.org/protobuf/proto"
 
-	"github.com/livekit/livekit-server/pkg/config"
-	"github.com/livekit/livekit-server/pkg/rtc/types"
-	"github.com/livekit/livekit-server/pkg/sfu"
-	"github.com/livekit/livekit-server/pkg/sfu/streamallocator"
-	"github.com/livekit/livekit-server/pkg/telemetry"
-	"github.com/livekit/protocol/livekit"
-	"github.com/livekit/protocol/logger"
+	"github.com/whoyao/livekit/pkg/config"
+	"github.com/whoyao/livekit/pkg/rtc/types"
+	"github.com/whoyao/livekit/pkg/sfu"
+	"github.com/whoyao/livekit/pkg/sfu/streamallocator"
+	"github.com/whoyao/livekit/pkg/telemetry"
+	"github.com/whoyao/protocol/livekit"
+	"github.com/whoyao/protocol/logger"
 )
 
 const (
@@ -122,7 +123,7 @@ func NewTransportManager(params TransportManagerParams) (*TransportManager, erro
 		Logger:                  LoggerWithPCTarget(params.Logger, livekit.SignalTarget_PUBLISHER),
 		SimTracks:               params.SimTracks,
 		ClientInfo:              params.ClientInfo,
-	})
+	}, []interceptor.Factory{})
 	if err != nil {
 		return nil, err
 	}
@@ -155,7 +156,7 @@ func NewTransportManager(params TransportManagerParams) (*TransportManager, erro
 		ClientInfo:              params.ClientInfo,
 		IsOfferer:               true,
 		IsSendSide:              true,
-	})
+	}, []interceptor.Factory{})
 	if err != nil {
 		return nil, err
 	}

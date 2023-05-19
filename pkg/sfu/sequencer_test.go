@@ -7,7 +7,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/livekit/protocol/logger"
+	"github.com/whoyao/protocol/logger"
 )
 
 func Test_sequencer(t *testing.T) {
@@ -55,13 +55,13 @@ func Test_sequencer_getNACKSeqNo(t *testing.T) {
 		seqNo []uint16
 	}
 	type fields struct {
-		input   []uint16
-		padding []uint16
-		offset  uint16
-		codecBytesOdd []byte
+		input          []uint16
+		padding        []uint16
+		offset         uint16
+		codecBytesOdd  []byte
 		codecBytesEven []byte
-		ddBytesOdd []byte
-		ddBytesEven []byte
+		ddBytesOdd     []byte
+		ddBytesEven    []byte
 	}
 
 	tests := []struct {
@@ -73,13 +73,13 @@ func Test_sequencer_getNACKSeqNo(t *testing.T) {
 		{
 			name: "Should get correct seq numbers",
 			fields: fields{
-				input:   []uint16{2, 3, 4, 7, 8, 11},
-				padding: []uint16{9, 10},
-				offset:  5,
-				codecBytesOdd: []byte{1, 2, 3, 4},
+				input:          []uint16{2, 3, 4, 7, 8, 11},
+				padding:        []uint16{9, 10},
+				offset:         5,
+				codecBytesOdd:  []byte{1, 2, 3, 4},
 				codecBytesEven: []byte{5, 6, 7},
-				ddBytesOdd: []byte{8, 9, 10},
-				ddBytesEven: []byte{11, 12},
+				ddBytesOdd:     []byte{8, 9, 10},
+				ddBytesEven:    []byte{11, 12},
 			},
 			args: args{
 				seqNo: []uint16{4 + 5, 5 + 5, 8 + 5, 9 + 5, 10 + 5, 11 + 5},
@@ -93,7 +93,7 @@ func Test_sequencer_getNACKSeqNo(t *testing.T) {
 			n := newSequencer(5, 10, logger.GetLogger())
 
 			for _, i := range tt.fields.input {
-				if i % 2 == 0 {
+				if i%2 == 0 {
 					n.push(i, i+tt.fields.offset, 123, 3, tt.fields.codecBytesEven, tt.fields.ddBytesEven)
 				} else {
 					n.push(i, i+tt.fields.offset, 123, 3, tt.fields.codecBytesOdd, tt.fields.ddBytesOdd)
@@ -107,7 +107,7 @@ func Test_sequencer_getNACKSeqNo(t *testing.T) {
 			var got []uint16
 			for _, sn := range g {
 				got = append(got, sn.sourceSeqNo)
-				if sn.sourceSeqNo % 2 == 0 {
+				if sn.sourceSeqNo%2 == 0 {
 					require.Equal(t, tt.fields.codecBytesEven, sn.codecBytes)
 					require.Equal(t, tt.fields.ddBytesEven, sn.ddBytes)
 				} else {

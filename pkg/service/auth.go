@@ -8,8 +8,8 @@ import (
 
 	"github.com/twitchtv/twirp"
 
-	"github.com/livekit/protocol/auth"
-	"github.com/livekit/protocol/livekit"
+	"github.com/whoyao/protocol/auth"
+	"github.com/whoyao/protocol/livekit"
 )
 
 const (

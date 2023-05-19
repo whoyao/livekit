@@ -9,6 +9,7 @@ import (
 	dd "github.com/whoyao/livekit/pkg/sfu/dependencydescriptor"
 	"github.com/whoyao/protocol/livekit"
 	lksdp "github.com/whoyao/protocol/sdp"
+	"github.com/whoyao/webrtc/v3"
 )
 
 func (p *ParticipantImpl) setCodecPreferencesForPublisher(offer webrtc.SessionDescription) webrtc.SessionDescription {

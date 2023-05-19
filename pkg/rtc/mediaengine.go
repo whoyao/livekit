@@ -3,6 +3,8 @@ package rtc
 import (
 	"strings"
 
+	"github.com/whoyao/webrtc/v3"
+
 	"github.com/whoyao/livekit/pkg/sfu"
 	"github.com/whoyao/protocol/livekit"
 )

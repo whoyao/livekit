@@ -10,6 +10,7 @@ import (
 	"github.com/pion/rtp"
 	"github.com/stretchr/testify/require"
 	"github.com/whoyao/mediatransportutil/pkg/nack"
+	"github.com/whoyao/webrtc/v3"
 )
 
 var vp8Codec = webrtc.RTPCodecParameters{

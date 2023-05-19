@@ -9,6 +9,7 @@ import (
 	"github.com/whoyao/protocol/livekit"
 	"github.com/whoyao/protocol/logger"
 	"github.com/whoyao/protocol/utils"
+	"github.com/whoyao/webrtc/v3"
 
 	"github.com/whoyao/livekit/pkg/routing"
 	"github.com/whoyao/livekit/pkg/sfu"

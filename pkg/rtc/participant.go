@@ -2,7 +2,6 @@ package rtc
 
 import (
 	"context"
-	"github.com/pion/webrtc/v3"
 	"io"
 	"os"
 	"strconv"
@@ -14,6 +13,7 @@ import (
 	"github.com/pion/rtcp"
 	"github.com/pion/sdp/v3"
 	"github.com/pkg/errors"
+	"github.com/whoyao/webrtc/v3"
 	"go.uber.org/atomic"
 	"google.golang.org/protobuf/proto"
 

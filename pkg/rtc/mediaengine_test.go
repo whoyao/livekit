@@ -3,6 +3,8 @@ package rtc
 import (
 	"testing"
 
+	"github.com/whoyao/webrtc/v3"
+
 	"github.com/stretchr/testify/require"
 	"github.com/whoyao/protocol/livekit"
 )

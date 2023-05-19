@@ -6,6 +6,7 @@ import (
 	"github.com/pion/rtp"
 	"github.com/stretchr/testify/require"
 	"github.com/whoyao/livekit/pkg/sfu/buffer"
+	"github.com/whoyao/webrtc/v3"
 )
 
 const tsStep = uint32(48000 / 1000 * 10)

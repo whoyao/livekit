@@ -4,6 +4,7 @@ import (
 	"context"
 	"errors"
 	"fmt"
+	"github.com/pion/interceptor"
 	"io"
 	"net/http"
 	"net/url"
@@ -21,6 +22,7 @@ import (
 	"github.com/whoyao/mediatransportutil/pkg/rtcconfig"
 	"github.com/whoyao/protocol/livekit"
 	"github.com/whoyao/protocol/logger"
+	"github.com/whoyao/webrtc/v3"
 
 	"github.com/whoyao/livekit/pkg/rtc"
 	"github.com/whoyao/livekit/pkg/rtc/types"
@@ -149,7 +151,7 @@ func NewRTCClient(conn *websocket.Conn) (*RTCClient, error) {
 		EnabledCodecs:   codecs,
 		IsOfferer:       true,
 		IsSendSide:      true,
-	})
+	}, []interceptor.Factory{})
 	if err != nil {
 		return nil, err
 	}
@@ -157,7 +159,7 @@ func NewRTCClient(conn *websocket.Conn) (*RTCClient, error) {
 		Config:          &conf,
 		DirectionConfig: conf.Publisher,
 		EnabledCodecs:   codecs,
-	})
+	}, []interceptor.Factory{})
 	if err != nil {
 		return nil, err
 	}

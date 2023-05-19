@@ -13,6 +13,7 @@ import (
 
 	"github.com/whoyao/protocol/livekit"
 	"github.com/whoyao/protocol/logger"
+	"github.com/whoyao/webrtc/v3"
 
 	"github.com/whoyao/livekit/pkg/config"
 	"github.com/whoyao/livekit/pkg/sfu"

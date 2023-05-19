@@ -2,6 +2,8 @@ package sfu
 
 import (
 	"strings"
+
+	"github.com/whoyao/webrtc/v3"
 )
 
 // Do a fuzzy find for a codec in the list of codecs

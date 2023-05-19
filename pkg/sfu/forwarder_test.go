@@ -5,6 +5,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 	"github.com/whoyao/protocol/logger"
+	"github.com/whoyao/webrtc/v3"
 
 	"github.com/whoyao/livekit/pkg/sfu/buffer"
 	"github.com/whoyao/livekit/pkg/sfu/testutils"

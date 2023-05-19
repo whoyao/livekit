@@ -8,6 +8,7 @@ import (
 
 	"github.com/whoyao/protocol/livekit"
 	"github.com/whoyao/protocol/logger"
+	"github.com/whoyao/webrtc/v3"
 )
 
 const (
